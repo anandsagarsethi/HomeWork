@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainmenu">
+
+    <fragment
+        android:id="@+id/dbwork"
+        android:name="com.anand.homework.Fragments.dbwork.dbwork"
+        android:label="fragment_dbwork"
+        tools:layout="@layout/fragment_dbwork" >
+        <action
+            android:id="@+id/action_dbwork_to_dbwork_showdata"
+            app:destination="@id/dbwork_showdata" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainmenu"
+        android:name="com.anand.homework.Fragments.mainmenu.mainmenu"
+        android:label="fragment_mainmenu"
+        tools:layout="@layout/fragment_mainmenu" >
+        <action
+            android:id="@+id/action_mainmenu_to_dbwork"
+            app:destination="@id/dbwork" />
+    </fragment>
+    <fragment
+        android:id="@+id/dbwork_showdata"
+        android:name="com.anand.homework.Fragments.dbwork.dbwork_showdata"
+        android:label="fragment_dbwork_showdata"
+        tools:layout="@layout/fragment_dbwork_showdata" />
+</navigation>
